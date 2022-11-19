@@ -3,13 +3,16 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function App() {
-  const [data, setData] = useState({ users: [] });
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios.get(`/api/users`).then((res) => {
       setData(res.data.users);
+      console.log(data)
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
 
   return (
     <div className="App">
@@ -17,8 +20,8 @@ function App() {
         <h1>Esto una prueba</h1>
 
         <ul>
-          {data.map((item) => (
-            <li key={item.objectID}></li>
+          {data.map((item, i) => (
+            <li key={i}>{item}</li>
           ))}
         </ul>
       </header>
