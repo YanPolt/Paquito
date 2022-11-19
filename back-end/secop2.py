@@ -36,7 +36,7 @@ def get_vectorizer(data_series):
     vectorizer = TfidfVectorizer()
     X = vectorizer.fit_transform(unicos)
     features = pd.DataFrame(X.toarray(), index=unicos)
-    return features, vectorizer
+    return data_series, features, vectorizer
 
 def predict_top_n(texto, features, vectorizer, n = 10):
     texto = procesar_texto_entrada(texto, feature_names = vectorizer.get_feature_names_out())
@@ -45,18 +45,3 @@ def predict_top_n(texto, features, vectorizer, n = 10):
     distance_df = pd.DataFrame(distance, index = features.index).sort_values(by=[0]).iloc[0: n, 0]
     search_list = distance_df.index.tolist()
     return search_list
-
-
-
-# Example
-contratos = pd.read_csv("SECOPII_sample.csv", sep = ";")
-nombre_entidad = contratos["Nombre.de.la.Entidad"]
-
-texto = "Acaldia bucarramanja"
-
-features, vectorizer = get_vectorizer(nombre_entidad)
-search_list = predict_top_n(texto, features, vectorizer)
-print("Resultado de la búsqueda:", texto)
-for i in search_list:
-    print("\t*", i)
-    

@@ -10,10 +10,13 @@ app = FastAPI()
 # Example
 contratos = pd.read_csv("SECOPII_sample.csv", sep = ";")
 nombre_entidad = contratos["Nombre.de.la.Entidad"]
-features, vectorizer = get_vectorizer(nombre_entidad)
+data_series, features, vectorizer = get_vectorizer(nombre_entidad)
+contratos['searchby'] = data_series
 ######
 
 @app.get("/")
 def read_root(q: Union[str, None] = None):
     if q is not None:
-        return predict_top_n(q, features, vectorizer)
+        search_list = predict_top_n(q, features, vectorizer)
+        result_list = contratos[contratos['searchby'].isin(search_list)]
+        return result_list.to_json(orient = 'records')
