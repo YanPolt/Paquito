@@ -48,7 +48,7 @@ export default function Table({ parentToChild }) {
             <td>{item["Tipo.de.Contrato"]}</td>
             <td>{item["Estado.del.Proceso"]}</td>
             <td>
-              <a href={item["URL.Contrato"]} target="_blank">Detalle</a>
+              <a href={item["URL.Contrato"]} target="_blank" rel="noreferrer">Detalle</a>
             </td>
           </tr>
         ))}

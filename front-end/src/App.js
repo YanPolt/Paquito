@@ -85,11 +85,13 @@ function App() {
       .then((res) => {
         var datos = JSON.parse(res.data);
         console.log(datos);
-        if (monto.min !== -1 && monto.max !== -1 && monto.min <= monto.max ) {
-          datos = datos.filter((item)=> (item["Valor.Contrato"]>=monto.min && item["Valor.Contrato"]<=monto.max));
+        console.log("min",monto.min)
+        console.log("max",monto.max)
+        if (monto.min !== -1 && monto.min !== '' && monto.max !== -1 && monto.max !== '' && monto.min <= monto.max ) {
+          datos = datos.filter((item)=> (item["Valor.Contrato"]<=monto.max && item["Valor.Contrato"]>=monto.min));
         }
         console.log(datos);
-        if (fecha.desde !== -1 && fecha.hasta !==-1) {
+        if (fecha.desde !== -1 && fecha.hasta !==-1 && fecha.desde !== '' && fecha.hasta !=='') {
           var desde = Date.parse(fecha.desde);
           var hasta = Date.parse(fecha.hasta);
           if(desde <= hasta){
