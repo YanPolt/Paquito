@@ -7,9 +7,16 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get(`/api/users`).then((res) => {
-      setData(res.data.users);
+    const info = JSON.stringify({"texts": [{ "info": "icbf bukaramanja"}]});
+    const headers = {
+      'Access-Control-Allow-Origin': '*',
+      'Content-Type': 'application/json',
+    };
+
+    axios.post('http://localhost:8000/find', info, {headers}).then((res) => {
+      setData(JSON.parse(res.data));
       console.log(data)
+
     });
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -22,7 +29,7 @@ function App() {
 
         <ul>
           {data.map((item, i) => (
-            <li key={i}>{item}</li>
+            <li key={i}>{item["Nombre.de.la.Entidad"]}</li>
           ))}
         </ul>
       </header>
