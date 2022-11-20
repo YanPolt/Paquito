@@ -216,16 +216,8 @@ function App() {
                 </Accordion>
                 <div className="row justify-content-center">
                   <Button
-                    className="col-4 mr-4"
-                    variant="danger"
-                    onClick={reiniciar}
-                    type="reset"
-                  >
-                    Cancelar
-                  </Button>
-                  <Button
                     className="col-4 customButton"
-                    variant="light"
+                    variant="info"
                     type="submit"
                   >
                     Filtrar
