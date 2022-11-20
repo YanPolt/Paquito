@@ -3,6 +3,25 @@
     "esto_es_una_prueba": "Esto es una prueba",
     "espanol": "Español",
     "ingles": "Inglés",
-    "frances": "Francés"
+    "frances": "Francés",
+    "StateEntity": "Entidad Estatal",
+    "EntityLevel": "Nivel de Entidad",
+    "Description" :"Descripción",
+    "Publicationdate" :"Fecha de publicación",
+    "contractvalue" :"Valor del contrato",
+    "Typeofcontract" :"Tipo de contrato",
+    "Stateoftheprocess" :"Estado del proceso",
+    "MotorBusqueda": "Motor de busqueda mejorado para Secop II",
+    "MotorBusquedaDesc": "Permite aplicar filtros y realizar busquedas generalizadas",
+    "AddFilters": "Añadir Filtros",
+    "SearchContract": "Buscar un contrato",
+    "monto": "Monto",
+    "fecha": "Fechas",
+    "minimo": "Mínimo",
+    "maximo": "Máximo",
+    "desde": "Desde",
+    "hasta": "Hasta",
+    "filtrar": "Filtrar",
+    "detalle": "Detalle"
   }
 }

@@ -3,6 +3,25 @@
     "esto_es_una_prueba": "This is a test",
     "espanol": "Spanish",
     "ingles": "English",
-    "frances": "French"
+    "frances": "French",
+    "StateEntity": "State Entity",
+    "EntityLevel": "Entity Level",
+    "Description" :"Description",
+    "Publicationdate" :"Publication date",
+    "contractvalue" :"contract value",
+    "Typeofcontract" :"Type of contract",
+    "Stateoftheprocess" :"State of the process",
+    "MotorBusqueda": "Improved search engine for Secop II",
+    "MotorBusquedaDesc": "Allows you to apply filters and perform generalized searches",
+    "AddFilters": "Add Filters",
+    "SearchContract": "Search for a contract",
+    "monto": "Amount",
+    "fecha": "Dates",
+    "minimo": "Min",
+    "maximo": "Max",
+    "desde": "From",
+    "hasta": "Until",
+    "filtrar": "Filter",
+    "detalle": "Detail"
   }
 }

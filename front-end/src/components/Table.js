@@ -1,31 +1,35 @@
 import React from "react";
 import { MDBTable, MDBTableHead, MDBTableBody } from "mdb-react-ui-kit";
+import { useTranslation } from "react-i18next";
 
 export default function Table({ parentToChild }) {
+
+  const [t, i18n] = useTranslation("global");
+
   return (
     <MDBTable stripped borded hover className="table-align-middle">
       <MDBTableHead className="head-table">
         <tr>
           <th className="align-middle" scope="col">
-            Entidad Estatal
+            {t("header.StateEntity")}
           </th>
           <th className="align-middle" scope="col">
-            Nivel de Entidad
+            {t("header.EntityLevel")}
           </th>
           <th className="align-middle" scope="col">
-            Descripción
+            {t("header.Description")}
           </th>
           <th className="align-middle" scope="col">
-            Fecha de publicación
+            {t("header.Publicationdate")}
           </th>
           <th className="align-middle" scope="col">
-            Valor del contrato
+            {t("header.contractvalue")}
           </th>
           <th className="align-middle" scope="col">
-            Tipo de contrato
+            {t("header.Typeofcontract")}
           </th>
           <th className="align-middle" scope="col">
-            Estado del proceso
+            {t("header.Stateoftheprocess")}
           </th>
           <th className="align-middle" scope="col">
             {" "}
@@ -49,7 +53,7 @@ export default function Table({ parentToChild }) {
             <td>{item["Estado.del.Proceso"]}</td>
             <td>
               <a href={item["URL.Contrato"]} target="_blank" rel="noreferrer">
-                Detalle
+              {t("header.detalle")}
               </a>
             </td>
           </tr>

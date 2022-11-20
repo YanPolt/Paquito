@@ -12,8 +12,12 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { faSearch, faFilter } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 function App() {
+
+  const [t, i18n] = useTranslation("global");
+
   const [data, setData] = useState([]);
   const [info, setInfo] = useState({
     info: "",
@@ -127,17 +131,17 @@ function App() {
       <header className="App-header">
         <Header />
         <h1 className="text-center font-weight-bold mt-3">
-          Motor de busqueda mejorado para Secop II
+          {t("header.MotorBusqueda")}
         </h1>
         <h3 className="text-center">
-          Permite aplicar filtros y realizar busquedas generalizadas
+          {t("header.MotorBusquedaDesc")}
         </h3>
         <InputGroup className="d-flex align-items-center justify-content-center">
           <Form onSubmit={enviarDatos} className="drop">
             <InputGroup className="find mt-4 mb-4">
               <Form.Control
                 type="text"
-                placeholder="Buscar un contrato"
+                placeholder={t("header.SearchContract")}
                 id="info"
                 name="info"
                 onChange={handleInputChangeInfo}
@@ -156,17 +160,17 @@ function App() {
           <Form onSubmit={enviarDatos}>
             <Dropdown>
               <Dropdown.Toggle className="customButton" variant="info">
-                Añadir Filtros{" "}
+                {t("header.AddFilters")}{" "}
                 <FontAwesomeIcon icon={faFilter}></FontAwesomeIcon>
               </Dropdown.Toggle>
               <Dropdown.Menu className="col-md-6">
                 <Accordion alwaysOpen className="mb-3">
                   <Accordion.Item eventKey="0">
-                    <Accordion.Header>Monto</Accordion.Header>
+                    <Accordion.Header>{t("header.monto")}</Accordion.Header>
                     <Accordion.Body>
                       <InputGroup>
                         <div className="col">
-                          <h6>Mínimo:</h6>
+                          <h6>{t("header.minimo")}:</h6>
                           <Form.Control
                             type="number"
                             placeholder="Mín"
@@ -176,7 +180,7 @@ function App() {
                           ></Form.Control>
                         </div>
                         <div className="col">
-                          <h6>Máximo:</h6>
+                          <h6>{t("header.maximo")}:</h6>
                           <Form.Control
                             type="number"
                             placeholder="Máx"
@@ -188,11 +192,11 @@ function App() {
                     </Accordion.Body>
                   </Accordion.Item>
                   <Accordion.Item eventKey="1">
-                    <Accordion.Header>Fechas</Accordion.Header>
+                    <Accordion.Header>{t("header.fecha")}</Accordion.Header>
                     <Accordion.Body>
                       <InputGroup>
                         <div className="col">
-                          <h6>Desde:</h6>
+                          <h6>{t("header.desde")}:</h6>
                           <Form.Control
                             type="date"
                             placeholder="Desde"
@@ -202,7 +206,7 @@ function App() {
                           ></Form.Control>
                         </div>
                         <div className="col">
-                          <h6>Hasta:</h6>
+                          <h6>{t("header.hasta")}:</h6>
                           <Form.Control
                             type="date"
                             placeholder="Hasta"
@@ -220,7 +224,7 @@ function App() {
                     variant="info"
                     type="submit"
                   >
-                    Filtrar
+                    {t("header.filtrar")}
                   </Button>
                 </div>
               </Dropdown.Menu>
