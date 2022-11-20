@@ -8,7 +8,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faFilter } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [data, setData] = useState([]);
@@ -68,6 +68,11 @@ function App() {
                 <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
               </Button>
             </div>
+
+            <div className="input-group-append ml-5">
+              <Button className="customButton" variant="info" type="submit">Añadir Filtros <FontAwesomeIcon icon={faFilter} className=""></FontAwesomeIcon></Button>
+            </div>
+
           </InputGroup>
         </Form>
         <Table parentToChild={data} />
