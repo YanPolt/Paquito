@@ -42,7 +42,7 @@ function App() {
   const handleInputChangeMonto = (event) => {
     setMonto({
       ...monto,
-      [event.target.id]: event.target.value,
+      [event.target.id]: parseInt(event.target.value),
     });
     console.log(monto);
   };
