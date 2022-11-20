@@ -3,8 +3,8 @@ import { MDBTable, MDBTableHead, MDBTableBody } from "mdb-react-ui-kit";
 
 export default function Table({ parentToChild }) {
   return (
-    <MDBTable className="table-align-middle">
-      <MDBTableHead className="head-table">
+    <MDBTable stripped borded hover className="table-align-middle">
+      <MDBTableHead dark>
         <tr>
           <th className="align-middle" scope="col">
             Entidad Estatal
@@ -35,22 +35,20 @@ export default function Table({ parentToChild }) {
       <MDBTableBody>
         {parentToChild.map((item, i) => (
           <tr>
-            <td key={i}>{item["Nombre.de.la.Entidad"]}</td>
-            <td key={i}>{item["Nivel.Entidad"]}</td>
-            <td key={i}>{item["Objeto.a.Contratar"]}</td>
-            <td key={i}>{item["Fecha.de.Firma.del.Contrato"]}</td>
-            <td key={i}>
+            <td>{item["Nombre.de.la.Entidad"]}</td>
+            <td>{item["Nivel.Entidad"]}</td>
+            <td>{item["Objeto.a.Contratar"]}</td>
+            <td>{item["Fecha.de.Firma.del.Contrato"]}</td>
+            <td>
               {item["Valor.Contrato"]
                 .toString()
                 .replace(/\B(?=(\d{3})+(?!\d))/g, ",")}{" "}
               COP
             </td>
-            <td key={i}>{item["Tipo.de.Contrato"]}</td>
-            <td key={i}>{item["Estado.del.Proceso"]}</td>
-            <td key={i}>
-              <a href={item["URL.Contrato"]} target="_blank">
-                Detalle
-              </a>
+            <td>{item["Tipo.de.Contrato"]}</td>
+            <td>{item["Estado.del.Proceso"]}</td>
+            <td>
+              <a href={item["URL.Contrato"]} target="_blank">Detalle</a>
             </td>
           </tr>
         ))}

@@ -29,8 +29,12 @@
 }
 
 .find {
-  width: 50%;
-  margin: 0 auto;
+  width: 90%;
+  margin: auto;
+}
+
+.drop{
+  width: 40%;
 }
 
 .customButton {
