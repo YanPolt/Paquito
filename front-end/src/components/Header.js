@@ -18,7 +18,7 @@ function Header() {
         <a className="navbar-brand" href="#">
           <img
             src={bannerLogo}
-            class="d-inline-block align-top"
+            className="d-inline-block align-top"
             alt="Logo del Software Paquito"
             id="header-img-banner-logo"
           />
