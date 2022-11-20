@@ -4,7 +4,7 @@ import { MDBTable, MDBTableHead, MDBTableBody } from "mdb-react-ui-kit";
 export default function Table({ parentToChild }) {
   return (
     <MDBTable className="table-align-middle">
-      <MDBTableHead dark>
+      <MDBTableHead className="head-table">
         <tr>
           <th className="align-middle" scope="col">
             Entidad Estatal
@@ -48,7 +48,9 @@ export default function Table({ parentToChild }) {
             <td key={i}>{item["Tipo.de.Contrato"]}</td>
             <td key={i}>{item["Estado.del.Proceso"]}</td>
             <td key={i}>
-              <a href={item["URL.Contrato"]}>Detalle</a>
+              <a href={item["URL.Contrato"]} target="_blank">
+                Detalle
+              </a>
             </td>
           </tr>
         ))}

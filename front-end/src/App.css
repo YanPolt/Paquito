@@ -14,6 +14,11 @@
   min-height: 5rem;
 }
 
+.head-table {
+  background-color: #1b3b6f;
+  color: white;
+}
+
 .dropdown-custom {
   background: #9ed8db;
   border-radius: 8px;
@@ -31,4 +36,11 @@
 .customButton {
   border: 1px solid gray;
   border-radius: 3px;
+}
+
+.customButtonSearch {
+  border: 1px solid gray;
+  border-radius: 3px;
+  background-color: #1c7293;
+  color: white;
 }

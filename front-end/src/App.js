@@ -64,15 +64,21 @@ function App() {
               onChange={handleInputChange}
             ></Form.Control>
             <div className="input-group-append">
-              <Button className="customButton" variant="light" type="submit">
+              <Button
+                className="customButtonSearch"
+                variant="light"
+                type="submit"
+              >
                 <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
               </Button>
             </div>
 
             <div className="input-group-append ml-5">
-              <Button className="customButton" variant="info" type="submit">Añadir Filtros <FontAwesomeIcon icon={faFilter} className=""></FontAwesomeIcon></Button>
+              <Button className="customButton" variant="info" type="submit">
+                Añadir Filtros{" "}
+                <FontAwesomeIcon icon={faFilter} className=""></FontAwesomeIcon>
+              </Button>
             </div>
-
           </InputGroup>
         </Form>
         <Table parentToChild={data} />
