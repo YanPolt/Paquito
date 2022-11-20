@@ -22,3 +22,13 @@
   min-width: 3.4375rem;
   min-height: 1.25rem;
 }
+
+.find {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.customButton{
+  border: 1px solid gray;
+  border-radius: 3px;
+}
