@@ -1,5 +1,8 @@
 {
   "header": {
-    "esto_es_una_prueba": "Esto es una prueba"
+    "esto_es_una_prueba": "Esto es una prueba",
+    "espanol": "Español",
+    "ingles": "Inglés",
+    "frances": "Francés"
   }
 }
