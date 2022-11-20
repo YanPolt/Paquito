@@ -1,8 +1,9 @@
 import "./App.css";
-import Table from "react-bootstrap/Table";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Header from "./components/Header";
+import Table from "./components/Table";
+
 
 function App() {
   const [data, setData] = useState([]);
@@ -25,11 +26,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
-        <ul>
-          {data.map((item, i) => (
-            <li key={i}>{item["Nombre.de.la.Entidad"]}</li>
-          ))}
-        </ul>
+        <Table parentToChild={data}/>
       </header>
     </div>
   );
