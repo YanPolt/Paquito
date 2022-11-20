@@ -56,7 +56,7 @@ function App() {
           Permite aplicar filtros y realizar busquedas generalizadas
         </h3>
         <Form onSubmit={enviarDatos}>
-          <InputGroup className="find mt-4">
+          <InputGroup className="find mt-4 mb-4">
             <Form.Control
               type="text"
               placeholder="Buscar un contrato"
@@ -71,11 +71,6 @@ function App() {
           </InputGroup>
         </Form>
         <Table parentToChild={data} />
-        <ul>
-          {data?.map((item, i) => (
-            <li key={i}>{item["Nombre.de.la.Entidad"]}</li>
-          ))}
-        </ul>
       </header>
     </div>
   );
