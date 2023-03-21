@@ -12,7 +12,8 @@ Antes de iniciar con la ejecución de Paquito es necesario instalar [Node Js](ht
 - Para correr el back-end:
     1. Abrir la carpeta donde se encuentra el back-end usando la terminal de su preferencia (`cd back-end`) 
     2. Correr la siguiente línea de código en la terminal `pip install -r requirements.txt` 
-    3. Finalmente ejecutar el siguiente código `uvicorn main:app --reload`
+    3. Abrir el archivo back-end/main.py y en la línea 25 añadir la ruta donde se encuentra el archivo csv que se va a leer
+    4. Finalmente ejecutar el siguiente código `uvicorn main:app --reload`
 
 
 - Para correr el front-end:
