@@ -22,7 +22,7 @@ app.add_middleware(
 )
 ######
 # Example
-contratos = pd.read_csv("https://paquito-s3.s3.amazonaws.com/SECOPII_sample.csv", sep = ";")
+contratos = pd.read_csv(".\SECOPII_sample.csv", sep = ";")
 nombre_entidad = contratos["Nombre.de.la.Entidad"]
 data_series, features, vectorizer = get_vectorizer(nombre_entidad)
 contratos['searchby'] = data_series
